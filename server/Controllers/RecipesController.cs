@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+
 [ApiController]
 [Route("api/[controller]")]
 public class RecipesController : ControllerBase
@@ -48,6 +50,24 @@ public class RecipesController : ControllerBase
     try
     {
       Recipe recipe = _recipesService.GetRecipeById(recipeId);
+      return Ok(recipe);
+    }
+    catch (Exception exception)
+    {
+      return BadRequest(exception.Message);
+    }
+  }
+
+  // ANCHOR 
+  // TODO finish te put request here and in repo and service, run postman test to check
+  [HttpPut("{recipeId}")]
+  [Authorize]
+  public async Task<ActionResult<Recipe>> UpdateRecipe(int recipeId)
+  {
+    try
+    {
+      Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
+      Recipe recipe = _recipesService.UpdateRecipe(recipeId, userInfo.Id);
       return Ok(recipe);
     }
     catch (Exception exception)
