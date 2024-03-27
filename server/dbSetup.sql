@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS accounts(
   picture varchar(255) COMMENT 'User Picture'
 ) default charset utf8mb4 COMMENT '';
 
-CREATE TABLE recipe {
+CREATE TABLE recipe(
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   createdAt DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Time Created',
   updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Last Update',
@@ -17,6 +17,6 @@ CREATE TABLE recipe {
   category SET("soups", "pasta", "fish", "salads", "beef", "burger", "pasta", "sandwich", "breakfast", "lunch", "dinner", "mexican", "italian", "chinese", "entrees", "snack", "dessert", "appetizer", "meal") NOT NULL,
   creatorId VARCHAR(255) NOT NULL,
   FOREIGN KEY (creatorId) REFERENCES accounts(id) ON DELETE CASCADE
-}
+)
 
 SELECT * FROM accounts
