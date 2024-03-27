@@ -12,10 +12,16 @@ public class RecipesService {
     Recipe recipe = _repository.CreateRecipe(recipeData);
     return recipe;
   }
-
   internal List<Recipe> GetRecipes()
   {
     List<Recipe> recipes = _repository.GetRecipes();
     return recipes;
   }
+  internal Recipe GetRecipeById(int recipeId)
+  {
+    Recipe recipe = _repository.GetRecipeById(recipeId);
+    return recipe;
+  }
+
+
 }
