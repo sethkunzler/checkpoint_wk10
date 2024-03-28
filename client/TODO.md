@@ -1,5 +1,7 @@
 Hours Spent on this Project: 
- Hours: hrs Start: 2:00 P.M. End: P.M.
+ Hours: 3 hrs Start: 2:00 P.M. End: 5:00 P.M.
+ Hours:  hrs Start: 9:30 A.M. End: 0:00 P.M.
+ Hours:  hrs Start: 0:00 A.M. End: 0:00 P.M.
 
 REFRENCES: 
 https://github.com/CodeWorks-FullStack/winter24_post_it_csharp/commits/main/

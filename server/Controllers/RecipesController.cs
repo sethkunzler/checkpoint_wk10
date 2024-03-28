@@ -5,12 +5,12 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 public class RecipesController : ControllerBase
 {
   private readonly RecipesService _recipesService;
-  private readonly Auth0Provider _auth0provider;
+  private readonly Auth0Provider _auth0Provider;
 
-    public RecipesController(RecipesService recipesService, Auth0Provider auth0provider)
+    public RecipesController(RecipesService recipesService, Auth0Provider auth0Provider)
     {
         _recipesService = recipesService;
-        _auth0provider = auth0provider;
+        _auth0Provider = auth0Provider;
     }
 
   [HttpPost]
@@ -19,7 +19,7 @@ public class RecipesController : ControllerBase
   {
     try
     {
-      Account userInfo = await _auth0provider.GetUserInfoAsync<Account>(HttpContext);
+      Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
       recipeData.CreatorId = userInfo.Id;
       Recipe recipe = _recipesService.CreateRecipe(recipeData);
       return Ok(recipe);
@@ -62,12 +62,12 @@ public class RecipesController : ControllerBase
   // TODO finish te put request here and in repo and service, run postman test to check
   [HttpPut("{recipeId}")]
   [Authorize]
-  public async Task<ActionResult<Recipe>> UpdateRecipe(int recipeId)
+  public async Task<ActionResult<Recipe>> UpdateRecipe(int recipeId, [FromBody] Recipe recipeData)
   {
     try
     {
       Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
-      Recipe recipe = _recipesService.UpdateRecipe(recipeId, userInfo.Id);
+      Recipe recipe = _recipesService.UpdateRecipe(recipeId, userInfo.Id, recipeData);
       return Ok(recipe);
     }
     catch (Exception exception)

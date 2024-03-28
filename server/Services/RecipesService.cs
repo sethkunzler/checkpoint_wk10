@@ -20,8 +20,27 @@ public class RecipesService {
   internal Recipe GetRecipeById(int recipeId)
   {
     Recipe recipe = _repository.GetRecipeById(recipeId);
+    if (recipe == null) 
+    {
+      throw new Exception($" Tried to find Recipe Id. Invalid Recipe Id: {recipeId}");
+    }
     return recipe;
   }
 
+  internal Recipe UpdateRecipe(int recipeId, string userId, Recipe recipeData)
+  {
+    Recipe recipeToUpdate = GetRecipeById(recipeId);
+    if (recipeToUpdate.CreatorId != userId) 
+    {
+      throw new Exception("Forbidden! This is not the recipe you are looking for. Access to Edit this recipe is restricted to the user.");
+    }
+    recipeToUpdate.Title = recipeData.Title ?? recipeToUpdate.Title;
+    recipeToUpdate.Img = recipeData.Img ?? recipeToUpdate.Img;
+    recipeToUpdate.Instructions = recipeData.Instructions ?? recipeToUpdate.Instructions;
+    
+    Recipe updatedRecipe = _repository.UpdateRecipe(recipeToUpdate);
+
+    return updatedRecipe; 
+  }
 
 }

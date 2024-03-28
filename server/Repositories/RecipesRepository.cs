@@ -62,4 +62,20 @@ public class RecipesRepository
     }, new {recipeId}).FirstOrDefault();
     return recipe; 
   }
+
+  internal Recipe UpdateRecipe(Recipe recipeToUpdate)
+  {
+    string sql= @"
+      UPDATE recipes 
+      SET 
+      title = @Title,
+      img = @Img,
+      instructions = @Instructions
+      WHERE id = @Id
+      Limit 1;
+      
+      SELECT * FROM recipes WHERE id = @Id;";
+    Recipe recipe = _db.Query<Recipe>(sql, recipeToUpdate).FirstOrDefault();
+    return recipe;
+  }
 }
