@@ -1,3 +1,4 @@
+
 namespace checkpoint_wk10.Repositories;
 
 public class RecipesRepository 
@@ -77,5 +78,11 @@ public class RecipesRepository
       SELECT * FROM recipes WHERE id = @Id;";
     Recipe recipe = _db.Query<Recipe>(sql, recipeToUpdate).FirstOrDefault();
     return recipe;
+  }
+
+  internal void DeleteRecipe(int recipeId)
+  {
+    string sql = "DELETE FROM recipes WHERE id = @recipeId LIMIT 1;";
+    _db.Execute(sql, new {recipeId}); 
   }
 }

@@ -43,4 +43,14 @@ public class RecipesService {
     return updatedRecipe; 
   }
 
+  internal string DeleteRecipe(int recipeId, string userId)
+  {
+    Recipe foundRecipe = GetRecipeById(recipeId);
+    if (foundRecipe.CreatorId != userId) 
+    {
+      throw new Exception("The Destruction of other people's property is Malicious! Ain't no one 'bout to destroy this grandma's recipe that ain't that granny!");
+    }
+    _repository.DeleteRecipe(recipeId);
+    return $"{foundRecipe.Title} has been deleted.";
+  }
 }
