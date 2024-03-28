@@ -8,6 +8,12 @@ CREATE TABLE IF NOT EXISTS accounts(
   picture varchar(255) COMMENT 'User Picture'
 ) default charset utf8mb4 COMMENT '';
 
+-- #region Account executables
+
+SELECT * FROM accounts;
+
+-- #endregion 
+
 CREATE TABLE recipes(
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   createdAt DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Time Created',
@@ -20,8 +26,21 @@ CREATE TABLE recipes(
   FOREIGN KEY (creatorId) REFERENCES accounts(id) ON DELETE CASCADE
 )
 
-DROP TABLE recipes
+-- #region Recipe exacutables 
 
-SELECT * FROM accounts;
+DROP TABLE recipes;
 
-SELECT * FROM recipes
+
+SELECT * FROM recipes;
+
+-- #endregion 
+
+CREATE TABLE ingredients(
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Time Created',
+  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Last Update',
+  name VARCHAR(255) NOT NULL COMMENT 'Ingredient Name',
+  quantity VARCHAR(255) NOT NULL COMMENT 'Amount of Ingredient to be used',
+  recipeId VARCHAR(255) NOT NULL,
+  FOREIGN KEY (recipeId) REFERENCES recipes(id) ON DELETE CASCADE
+)

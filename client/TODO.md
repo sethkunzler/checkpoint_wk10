@@ -1,12 +1,13 @@
 Hours Spent on this Project: 
  Hours: 3 hrs Start: 2:00 P.M. End: 5:00 P.M.
- Hours:  hrs Start: 9:30 A.M. End: 0:00 P.M.
- Hours:  hrs Start: 0:00 A.M. End: 0:00 P.M.
+ Hours: 2 hrs Start: 9:30 A.M. End: 12:00 P.M.
+ Hours: 0 hrs Start: 1:30 P.M. End: 0:00 P.M.
+ Hours: 0 hrs Start: 0:00 A.M. End: 0:00 P.M.
 
 REFRENCES: 
 https://github.com/CodeWorks-FullStack/winter24_post_it_csharp/commits/main/
 UML: 
-https://figmage.com/images/ABQfazurr_gfk-Fx_nlBB.png
+https://www.figma.com/file/kEXhdSFlfiP46Wiq9FBWff/AllSpice?type=whiteboard&node-id=0-1&t=xXK4hYxeeosEqwap-0
 FIGMA:
 https://www.figma.com/file/7M0EGMcTXnx2trdmnH6NSG/All-Spice?type=design&node-id=1-4&mode=design&t=GfXsCveTjakP4G4O-0
 
