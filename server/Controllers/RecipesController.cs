@@ -58,7 +58,6 @@ public class RecipesController : ControllerBase
     }
   }
 
-  // TODO
   [HttpGet("{recipeId}/ingredients")]
   public ActionResult<List<Ingredient>> GetIngredientsByRecipeId(int recipeId)
   {

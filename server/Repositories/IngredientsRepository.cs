@@ -1,3 +1,5 @@
+
+
 namespace checkpoint_wk10.Repositories; 
 
 public class IngredientsRepository
@@ -31,7 +33,14 @@ public class IngredientsRepository
     return ingredient;
   }
 
-  internal List<Ingredient> GetIngredientsByRecipeId(int recipeId)
+  internal Ingredient GetIngredientById(int ingredientId)
+  {
+    string sql = "SELECT * FROM ingredients WHERE id = @ingredientId;";
+    Ingredient ingredient = _db.Query<Ingredient>(sql, new {ingredientId}).FirstOrDefault();
+    return ingredient;
+  }
+
+    internal List<Ingredient> GetIngredientsByRecipeId(int recipeId)
   {
     string sql = @"
     SELECT 
@@ -45,7 +54,22 @@ public class IngredientsRepository
     return ingredients;
   }
 
-  private Ingredient _populateCreator(Ingredient ingredient, Account account)
+    internal void RemoveIngredient(int ingredientId)
+    {
+      string sql = "DELETE FROM ingredients WHERE id = @ingredientId LIMIT 1;";
+      int rowsAffected = _db.Execute(sql, new {ingredientId});
+      if (rowsAffected == 0)
+      {
+        throw new Exception("Nothing was Deleted. Check your sql and ingredient Id");
+      }
+      if (rowsAffected > 1)
+      {
+        throw new Exception("Digame que ya te resignas porque es bien probable que borraste TODO en tu tabla!");
+      }
+
+    }
+
+    private Ingredient _populateCreator(Ingredient ingredient, Account account)
   {
     ingredient.Creator = account;
     return ingredient;
