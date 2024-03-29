@@ -1,4 +1,3 @@
-
 namespace checkpoint_wk10.Repositories; 
 
 public class IngredientsRepository
@@ -29,6 +28,26 @@ public class IngredientsRepository
       return ingredient;
     }, ingredientData).FirstOrDefault();
 
+    return ingredient;
+  }
+
+  internal List<Ingredient> GetIngredientsByRecipeId(int recipeId)
+  {
+    string sql = @"
+    SELECT 
+    ingredient.*,
+    account.*
+    FROM ingredients ingredient
+    JOIN accounts account ON ingredient.creatorId = account.id
+    WHERE ingredient.recipeId = @RecipeId;";
+
+    List<Ingredient> ingredients = _db.Query<Ingredient, Account, Ingredient>(sql, _populateCreator, new {recipeId}).ToList();
+    return ingredients;
+  }
+
+  private Ingredient _populateCreator(Ingredient ingredient, Account account)
+  {
+    ingredient.Creator = account;
     return ingredient;
   }
 }

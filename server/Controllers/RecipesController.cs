@@ -1,19 +1,19 @@
-using Microsoft.AspNetCore.Mvc.Infrastructure;
-
 [ApiController]
 [Route("api/[controller]")]
 public class RecipesController : ControllerBase
 {
   private readonly RecipesService _recipesService;
   private readonly Auth0Provider _auth0Provider;
+  private readonly IngredientsService _ingredientsService;
 
-    public RecipesController(RecipesService recipesService, Auth0Provider auth0Provider)
+    public RecipesController(RecipesService recipesService, Auth0Provider auth0Provider, IngredientsService ingredientsService)
     {
         _recipesService = recipesService;
         _auth0Provider = auth0Provider;
+        _ingredientsService = ingredientsService;
     }
 
-  [HttpPost]
+    [HttpPost]
   [Authorize]
   public async Task<ActionResult<Recipe>> CreateRecipe([FromBody] Recipe recipeData)
   {
@@ -57,6 +57,22 @@ public class RecipesController : ControllerBase
       return BadRequest(exception.Message);
     }
   }
+
+  // TODO
+  [HttpGet("{recipeId}/ingredients")]
+  public ActionResult<List<Ingredient>> GetIngredientsByRecipeId(int recipeId)
+  {
+    try
+    {
+      List<Ingredient> ingredients = _ingredientsService.GetIngredientsByRecipeId(recipeId);
+      return Ok(ingredients);
+    }
+    catch (Exception exception)
+    {
+      return BadRequest(exception.Message);
+    }
+  }
+
 
   [HttpPut("{recipeId}")]
   [Authorize]

@@ -1,7 +1,8 @@
 Hours Spent on this Project: 
  Hours: 3 hrs Start: 2:00 P.M. End: 5:00 P.M.
  Hours: 2 hrs Start: 9:30 A.M. End: 12:00 P.M.
- Hours: 0 hrs Start: 1:30 P.M. End: 0:00 P.M.
+ Hours: 4 hrs Start: 1:30 P.M. End: 5:00 P.M.
+ Hours: 0 hrs Start: 1:30 A.M. End: 0:00 P.M.
  Hours: 0 hrs Start: 0:00 A.M. End: 0:00 P.M.
 
 REFRENCES: 

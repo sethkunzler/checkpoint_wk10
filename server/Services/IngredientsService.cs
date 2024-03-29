@@ -16,6 +16,7 @@ public class IngredientsService {
 
     internal List<Ingredient> GetIngredientsByRecipeId(int recipeId)
     {
-        throw new NotImplementedException();
+      List<Ingredient> ingredients = _repository.GetIngredientsByRecipeId(recipeId);
+      return ingredients;
     }
 }
