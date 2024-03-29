@@ -26,7 +26,7 @@ CREATE TABLE recipes(
   FOREIGN KEY (creatorId) REFERENCES accounts(id) ON DELETE CASCADE
 )
 
--- #region Recipe exacutables 
+-- #region Recipe executables 
 
 DROP TABLE recipes;
 
@@ -42,7 +42,9 @@ CREATE TABLE ingredients(
   name VARCHAR(255) NOT NULL COMMENT 'Ingredient Name',
   quantity VARCHAR(255) NOT NULL COMMENT 'Amount of Ingredient to be used',
   recipeId INT NOT NULL,
-  FOREIGN KEY (recipeId) REFERENCES recipes(id) ON DELETE CASCADE
+  creatorId VARCHAR(255) NOT NULL,
+  FOREIGN KEY (recipeId) REFERENCES recipes(id) ON DELETE CASCADE,
+  FOREIGN KEY (creatorId) REFERENCES accounts(id) ON DELETE CASCADE
 )
 
 CREATE TABLE favorites(

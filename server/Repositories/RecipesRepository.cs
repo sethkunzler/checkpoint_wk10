@@ -1,4 +1,3 @@
-
 namespace checkpoint_wk10.Repositories;
 
 public class RecipesRepository 
@@ -7,7 +6,7 @@ public class RecipesRepository
 
   public RecipesRepository(IDbConnection db)
   {
-      _db = db;
+    _db = db;
   }
   
   internal Recipe CreateRecipe(Recipe recipeData)
