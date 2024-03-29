@@ -34,8 +34,6 @@ public class IngredientsController : ControllerBase
     }
   }
 
-  // ANCHOR do this at some point
-  // TODO 
   [HttpDelete("{ingredientId}")]
   [Authorize]
   public async Task<ActionResult<string>> RemoveIngredient(int ingredientId)

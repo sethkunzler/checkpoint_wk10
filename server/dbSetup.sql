@@ -54,5 +54,10 @@ CREATE TABLE favorites(
   recipeId INT NOT NULL,
   accountId VARCHAR(255) NOT NULL,
   FOREIGN KEY (recipeId) REFERENCES recipes(id) ON DELETE CASCADE,
-  FOREIGN KEY (accountId) REFERENCES accounts(id) ON DELETE CASCADE
+  FOREIGN KEY (accountId) REFERENCES accounts(id) ON DELETE CASCADE,
+  UNIQUE(recipeId, accountId)
 )
+
+-- #region "favorites" executables
+DROP TABLE favorites;
+-- #endregion 

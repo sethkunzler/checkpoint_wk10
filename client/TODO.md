@@ -1,9 +1,21 @@
 Hours Spent on this Project: 
- Hours: 3 hrs Start: 2:00 P.M. End: 5:00 P.M.
- Hours: 2 hrs Start: 9:30 A.M. End: 12:00 P.M.
- Hours: 4 hrs Start: 1:30 P.M. End: 5:00 P.M.
- Hours: 0 hrs Start: 1:30 A.M. End: 0:00 P.M.
+ Hours: 3 hrs Start: 2:00 P.M. End: 5:00 P.M. Wednesday
+ Hours: 2 hrs Start: 9:30 A.M. End: 12:00 P.M. Thursday
+ Hours: 4 hrs Start: 1:30 P.M. End: 5:00 P.M. Thursday
+ Hours: 4 hrs Start: 1:30 A.M. End: 5:00 P.M. Friday
  Hours: 0 hrs Start: 0:00 A.M. End: 0:00 P.M.
+
+ 13 hours on the project to date.
+ expected total hours 27 hours
+
+Plan:
+Saturday - finish the backend 
+Sunday - Getting Recipes Front end -
+Monday - Front Page Fleshed out with all recipes drawing to the page neatly and a from to create more
+Tuesday - details modal for recipe with ingredients from and all ingredients
+Wednsday - like recipes and view liked and created recipes
+Thursday - final edits and grading 
+
 
 REFRENCES: 
 https://github.com/CodeWorks-FullStack/winter24_post_it_csharp/commits/main/
