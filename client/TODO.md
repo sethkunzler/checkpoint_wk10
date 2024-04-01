@@ -3,7 +3,7 @@ Hours Spent on this Project:
  Hours: 2 hrs Start: 9:30 A.M. End: 12:00 P.M. Thursday
  Hours: 4 hrs Start: 1:30 P.M. End: 5:00 P.M. Thursday
  Hours: 4 hrs Start: 1:30 A.M. End: 5:00 P.M. Friday
- Hours: 0 hrs Start: 5:30 P.M. End: 0:00 P.M. Sunday
+ Hours: 2 hrs Start: 5:30 P.M. End: 7:30 P.M. Sunday
  Hours: 0 hrs Start: 0:00 A.M. End: 0:00 P.M.
 
  13 hours on the project to date.
