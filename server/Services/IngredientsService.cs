@@ -1,6 +1,3 @@
-using System.Runtime.InteropServices;
-using Microsoft.Extensions.Configuration.UserSecrets;
-
 namespace checkpoint_wk10.Services;
 
 public class IngredientsService {

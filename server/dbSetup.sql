@@ -47,6 +47,12 @@ CREATE TABLE ingredients(
   FOREIGN KEY (creatorId) REFERENCES accounts(id) ON DELETE CASCADE
 )
 
+-- #region ingredients executables
+
+DROP TABLE ingredients; 
+
+-- #endregion
+
 CREATE TABLE favorites(
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   createdAt DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Time Created',

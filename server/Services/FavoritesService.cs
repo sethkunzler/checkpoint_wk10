@@ -8,4 +8,10 @@ public class FavoritesService
   {
     _repository = repository;
   }
+
+  internal Favorite EstablishFavorite(Favorite favoriteData)
+  {
+    Favorite favorite = _repository.EstablishFavorite(favoriteData);
+    return favorite;
+  }
 }
