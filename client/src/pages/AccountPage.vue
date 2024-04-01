@@ -4,6 +4,19 @@
     <img class="rounded" :src="account.picture" alt="" />
     <p>{{ account.email }}</p>
   </div>
+
+  <div class="container">
+    <section id="createdRecipes" class="row">
+      <div class="col-md-12">
+        <h2>My Recipes</h2>
+      </div>
+    </section>
+    <section id="favorites" class="row">
+      <div class="col-md-12">
+        <h2>My Favorite Recipes</h2>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>

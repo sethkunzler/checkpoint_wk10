@@ -21,6 +21,18 @@ const routes = [
     name: 'Account',
     component: loadPage('AccountPage'),
     beforeEnter: authGuard
+  },
+  {
+    path: '/account#createdRecipes',
+    name: 'My Recipes',
+    component: loadPage('AccountPage'),
+    beforeEnter: authGuard
+  },
+  {
+    path: '/account#favorites',
+    name: 'Favorites',
+    component: loadPage('AccountPage'),
+    beforeEnter: authGuard
   }
 ]
 

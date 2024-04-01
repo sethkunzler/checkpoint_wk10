@@ -12,8 +12,18 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto">
         <li>
-          <router-link :to="{ name: 'About' }" class="btn text-success lighten-30 selectable text-uppercase">
-            About
+          <router-link :to="{ name: 'Home' }" class="btn text-success lighten-30 selectable text-uppercase">
+            Home
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'My Recipes' }" class="btn text-success lighten-30 selectable text-uppercase">
+            My Recipes
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'Favorites' }" class="btn text-success lighten-30 selectable text-uppercase">
+            Favorites
           </router-link>
         </li>
       </ul>
