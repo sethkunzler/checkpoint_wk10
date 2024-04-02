@@ -14,6 +14,7 @@
 </div>
 </template>
 
+<!-- TODO on submit dismisses the modal -->
 
 <script>
 import CreateRecipeForm from "./CreateRecipeForm.vue";

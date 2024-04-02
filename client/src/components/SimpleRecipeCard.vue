@@ -11,6 +11,7 @@
         <btn class="btn btn-success opacity-75 text-capitalize" :title="'click to see more ' +  recipe.category">{{recipe.category}}</btn>
       </div>
       <div class="d-flex justify-content-end">
+        <!-- TODO reactively saves to the favorites database -->
         <button type="button" v-if="isLiked" class="mdi mdi-heart btn text-danger selectable rounded fs-4 py-1 px-2 mx-2" title="Click to Remove from Favorites"></button>
         <button type="button" v-else class="mdi mdi-heart-outline btn selectable rounded fs-4 py-1 px-2 mx-2" title="Click to Save"></button>
       </div>

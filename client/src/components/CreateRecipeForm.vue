@@ -34,7 +34,7 @@ setup(){
   const categories = ["breakfast", "lunch", "dinner", "meal", "entrees", "dessert", "appetizer", "snack", "salads", "soup", "pasta", "sandwich", "cheese", "coffee", "fish", "beef", "burger", "sausage", "french", "german", "russian", "mexican", "italian", "chinese", "japanese", "thai"]
   return{
     categories,
-    
+    // TODO add a create
   }
 }
 }

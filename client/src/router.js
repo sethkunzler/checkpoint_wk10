@@ -22,6 +22,7 @@ const routes = [
     component: loadPage('AccountPage'),
     beforeEnter: authGuard
   },
+  // TODO verify that both of these actually work when the account page displays more items
   {
     path: '/account#createdRecipes',
     name: 'My Recipes',

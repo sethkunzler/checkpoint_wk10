@@ -4,10 +4,13 @@ Hours Spent on this Project:
  Hours: 4 hrs Start: 1:30 P.M. End: 5:00 P.M. Thursday
  Hours: 4 hrs Start: 1:30 A.M. End: 5:00 P.M. Friday
  Hours: 2 hrs Start: 5:30 P.M. End: 7:30 P.M. Sunday
- Hours: 0 hrs Start: 0:00 A.M. End: 0:00 P.M.
+ Hours: 4 hrs Start: 1:30 A.M. End: 5:30 P.M. Monday
+ Hours: 3 hrs Start: 2:30 A.M. End: 5:30 P.M. Tuesday
+ Hours: 0 hrs Start: 0:00 A.M. End: 0:00 P.M. Wednesday
+ Hours: 0 hrs Start: 0:00 A.M. End: 0:00 P.M. Thursday
 
- 13 hours on the project to date.
- expected total hours 27 hours
+ 22 hours on the project to date.
+ expected total hours 30 hours
 
 Plan:
 Saturday - finish the backend 

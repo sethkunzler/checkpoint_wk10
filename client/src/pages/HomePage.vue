@@ -5,6 +5,7 @@
         <div class="col-md-12">
           <h1>Browse Recipes</h1>
         </div>
+        <!-- TODO query the api to search by category -->
         <div v-for="recipe in recipes" :key="recipe.id" class="col-md-4">
           <!-- STUB -->
           <SimpleRecipeCard :recipe="recipe"/>

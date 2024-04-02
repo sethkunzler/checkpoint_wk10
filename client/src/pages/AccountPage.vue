@@ -1,6 +1,7 @@
 <template>
   <div class="about text-center">
     <h1>Welcome {{ account.name }}</h1>
+    <!-- TODO add a form to edit name, picture and other account info -->
     <img class="rounded" :src="account.picture" alt="" />
     <p>{{ account.email }}</p>
   </div>
@@ -13,11 +14,16 @@
           <button type="button" data-bs-toggle="modal" data-bs-target="#createRecipeModal" class="btn btn-success fs-5" alt="Create New Recipe" title="Click to Create a New Recipe"> + New Recipe </button>
         </div>
       </div>
-
+      <div class="col-md-4">
+        <!-- TODO v-for "my created recipes" -->
+      </div>
     </section>
     <section id="favorites" class="row">
       <div class="col-md-12">
         <h2>My Favorite Recipes</h2>
+      </div>
+      <div class="col-md-4">
+        <!-- TODO v-for "my favorited recipes" -->
       </div>
     </section>
   </div>

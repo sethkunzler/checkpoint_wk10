@@ -7,6 +7,9 @@ class RecipesService {
     const response = await api.get('api/recipes')
     AppState.recipes = response.data.map(pojo => new Recipe(pojo))
   }
+
+  // TODO get recipes by creator ID
+  // NOTE not included in the postman tests
 }
 
 export const recipesService = new RecipesService()
