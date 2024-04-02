@@ -6,8 +6,8 @@ Hours Spent on this Project:
  Hours: 2 hrs Start: 5:30 P.M. End: 7:30 P.M. Sunday
  Hours: 4 hrs Start: 1:30 A.M. End: 5:30 P.M. Monday
  Hours: 3 hrs Start: 2:30 A.M. End: 5:30 P.M. Tuesday
- Hours: 0 hrs Start: 0:00 A.M. End: 0:00 P.M. Wednesday
- Hours: 0 hrs Start: 0:00 A.M. End: 0:00 P.M. Thursday
+ Hours: 0 hrs Start: 0:00 A.M. End: 0:00 P.M. 
+ Hours: 0 hrs Start: 0:00 A.M. End: 0:00 P.M. 
 
  22 hours on the project to date.
  expected total hours 30 hours
@@ -38,20 +38,25 @@ TODO:
 ❌From the main page users can login/logout and manage their profile
   -- must be able to edit account profile in some way
 ❌From the main page users can change the displayed recipes between all, favorites and the users recipes
+  --links change the displayed view, does not display favorite or created recipes
 
 ❌Recipe cards show title, subtitle, category and image
+  --No subtitle (was not included in the uml)
 
-❌Clicking on a recipe opens the recipe modal
+**❌Clicking on a recipe opens the recipe modal
+  --There is a modal, but the recipe card does not open the modal
 ❌The Recipe modal shows all the recipe details, including the ingredients and steps for that recipe
 ❌The owner of a recipe can delete a recipe, make sure this removes all favorites tied to it
 ❌The owner of the recipe can add, edit and delete ingredients and steps to the recipe
 
 ❌🟨When creating recipes the title and subtitle validate string length while category is selectable from a dropdown
+  -- MUST BE A DROPDOWN 
 
 ❌Logged in users can mark recipes as 'favorites'
+  --favorite mark does not update to the database
 
 ❌Users can search recipes by category
-
+  --Users cannot select the category
 
 8 Stretch Goals:
 
