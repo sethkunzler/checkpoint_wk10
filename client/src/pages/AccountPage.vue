@@ -8,8 +8,12 @@
   <div class="container">
     <section id="createdRecipes" class="row">
       <div class="col-md-12">
-        <h2>My Recipes</h2>
+        <div class="d-flex justify-content-between">
+          <h2>My Recipes</h2>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#createRecipeModal" class="btn btn-success fs-5" alt="Create New Recipe" title="Click to Create a New Recipe"> + New Recipe </button>
+        </div>
       </div>
+
     </section>
     <section id="favorites" class="row">
       <div class="col-md-12">

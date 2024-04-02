@@ -21,10 +21,10 @@ CREATE TABLE recipes(
   title VARCHAR(50) NOT NULL COMMENT 'Recipe Title',
   instructions VARCHAR(1000) NOT NULL,
   img VARCHAR(500) NOT NULL,
-  category SET("soup", "pasta", "fish", "salads", "beef", "burger", "sandwich", "breakfast", "lunch", "dinner", "mexican", "italian", "chinese", "entrees", "snack", "dessert", "appetizer", "meal", "coffee", "cheese") NOT NULL,
+  category SET("breakfast", "lunch", "dinner", "meal", "entrees", "dessert", "appetizer", "snack", "salads", "soup", "pasta", "sandwich", "cheese", "coffee", "fish", "beef", "burger", "sausage", "french", "german", "russian", "mexican", "italian", "chinese", "japanese", "thai") NOT NULL,
   creatorId VARCHAR(255) NOT NULL,
   FOREIGN KEY (creatorId) REFERENCES accounts(id) ON DELETE CASCADE
-)
+);
 
 -- #region Recipe executables 
 
@@ -45,7 +45,7 @@ CREATE TABLE ingredients(
   creatorId VARCHAR(255) NOT NULL,
   FOREIGN KEY (recipeId) REFERENCES recipes(id) ON DELETE CASCADE,
   FOREIGN KEY (creatorId) REFERENCES accounts(id) ON DELETE CASCADE
-)
+);
 
 -- #region ingredients executables
 
@@ -62,7 +62,7 @@ CREATE TABLE favorites(
   FOREIGN KEY (recipeId) REFERENCES recipes(id) ON DELETE CASCADE,
   FOREIGN KEY (accountId) REFERENCES accounts(id) ON DELETE CASCADE,
   UNIQUE(recipeId, accountId)
-)
+);
 
 -- #region "favorites" executables
 DROP TABLE favorites;
