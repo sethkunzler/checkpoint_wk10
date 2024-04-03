@@ -13,6 +13,8 @@
       </section>
     </div>
   </div>
+  <!-- STUB -->
+  <RecipeDetailsModal/>
 </template>
 
 <script>
@@ -20,6 +22,7 @@ import { computed, onMounted } from "vue"
 import Pop from "../utils/Pop.js"
 import {recipesService} from "../services/RecipesService.js"
 import SimpleRecipeCard from "../components/SimpleRecipeCard.vue"
+import RecipeDetailsModal from "../components/RecipeDetailsModal.vue"
 import { AppState } from "../AppState.js"
 
 export default {
@@ -35,8 +38,9 @@ export default {
     }
     return {
       recipes: computed(() => AppState.recipes)
-    }
-  }
+    };
+  },
+  components: { SimpleRecipeCard, RecipeDetailsModal}
 }
 </script>
 

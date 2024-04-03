@@ -6,10 +6,10 @@ Hours Spent on this Project:
  Hours: 2 hrs Start: 5:30 P.M. End: 7:30 P.M. Sunday
  Hours: 4 hrs Start: 1:30 A.M. End: 5:30 P.M. Monday
  Hours: 3 hrs Start: 2:30 A.M. End: 5:30 P.M. Tuesday
+ Hours: 3 hrs Start: 2:30 A.M. End: 5:00 P.M. Wednesday 
  Hours: 0 hrs Start: 0:00 A.M. End: 0:00 P.M. 
- Hours: 0 hrs Start: 0:00 A.M. End: 0:00 P.M. 
-
- 22 hours on the project to date.
+ 3 + 2 + 4 + 4 + 2 + 4 + 3 + 3
+ 25 hours on the project to date.
  expected total hours 30 hours
 
 Plan:
@@ -35,12 +35,11 @@ TODO:
  students may miss up to 2 and still be passing.
 )
 
-❌From the main page users can login/logout and manage their profile
-  -- must be able to edit account profile in some way
+✅From the main page users can login/logout and manage their profile
 ❌From the main page users can change the displayed recipes between all, favorites and the users recipes
-  --links change the displayed view, does not display favorite or created recipes
+  --links should not change the displayed view, should display all, favorite or created recipes on click
 
-❌Recipe cards show title, subtitle, category and image
+✅Recipe cards show title, subtitle, category and image
   --No subtitle (was not included in the uml)
 
 **❌Clicking on a recipe opens the recipe modal

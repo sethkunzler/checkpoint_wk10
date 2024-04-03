@@ -1,6 +1,6 @@
 <template>
   <div class="card my-2">
-    <div class="selectable " title="Click to see recipe details">
+    <div role="button" @click="setActiveRecipe(recipe.id)" class="selectable" data-bs-toggle="modal" data-bs-target="#recipeDetailsModal" title="Click to see recipe details">
       <h2 class="px-2">{{ recipe.title.substring(0,15) }} <span title="click to read more" class="text-primary">...</span></h2>
       <img class="recipe-card-img" :src="recipe.img" :alt="recipe.title">
     </div>
@@ -8,7 +8,7 @@
     <div class="d-flex justify-content-between align-items-center">
       <div class="pt-2 px-2 mb-2">
         <span>Explore Categories: </span>
-        <btn class="btn btn-success opacity-75 text-capitalize" :title="'click to see more ' +  recipe.category">{{recipe.category}}</btn>
+        <button class="btn btn-success opacity-75 text-capitalize" :title="'click to see more ' +  recipe.category">{{recipe.category}}</button>
       </div>
       <div class="d-flex justify-content-end">
         <!-- TODO reactively saves to the favorites database -->
@@ -22,7 +22,8 @@
 
 <script>
 import { Recipe } from "../models/Recipe.js"
-
+import { recipesService } from "../services/RecipesService.js";
+import Pop from "../utils/Pop.js";
 export default {
   props: {recipe : { type: Recipe, required : true}},
   setup(){
@@ -30,6 +31,14 @@ export default {
     const isLiked = false
     return{
       isLiked,
+      async setActiveRecipe(recipeId) {
+        try {
+          await recipesService.setActiveRecipe(recipeId);
+        }
+        catch (error){
+          Pop.error(error);
+        }
+      },
     }
   }
 }
