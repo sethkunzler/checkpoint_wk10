@@ -37,8 +37,8 @@
             </div>
             <div class="col-md-4">
               <h4>Ingredients</h4>
-              <div v-if="ingredients.">
-                {{ ingredients }}
+              <div v-for="ingredient in ingredients">
+                {{ ingredient }}
               </div>
             </div>
           </section>
