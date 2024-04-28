@@ -11,7 +11,7 @@
       <br><a class="mdi mdi-github selectable text-success fs-3 mx-2 px-2 rounded" href="https://github.com/sethkunzler" target="_blank" title="GitHub Profile"></a>
       <a class="mdi mdi-linkedin selectable text-success fs-3 mx-2 px-2 rounded" href="https://www.linkedin.com/in/seth-kunzler/" target="_blank" title="Linked In Profile"></a>
       <!-- TODO add my resume -->
-      <a class="mdi mdi-book selectable text-success fs-3 mx-2 px-2 rounded disabled" href="" target="_blank" title="Resume"></a>
+      <a class="mdi mdi-book selectable text-success fs-3 mx-2 px-2 rounded disabled" href="https://sethkunzler.github.io/Resume/" target="_blank" title="Resume"></a>
       <a class="mdi mdi-map-marker selectable text-primary fs-3 mx-2 px-2 rounded disabled" href="https://maps.app.goo.gl/iDJ5xRSpiYcWt3Mz7" target="_blank" title="Boise Codeworks' Location"></a>
       <a class="mdi mdi-facebook selectable text-primary fs-3 mx-2 px-2 rounded disabled" href="https://www.facebook.com/boisecodeworks/" target="_blank" title="Boise Codeworks' Facebook"></a>
       <a class="mdi mdi-web selectable text-primary fs-3 mx-2 px-2 rounded disabled" href="https://www.facebook.com/boisecodeworks/" target="_blank" title="Boise Codeworks' Home Page"></a>
